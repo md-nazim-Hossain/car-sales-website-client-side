@@ -1,0 +1,28 @@
+
+.border-left{
+    border-left: 3px solid red;;
+}
+.border-right{
+    border-right: 3px solid red;
+}
+.responsive{
+    width: 50%;
+    margin: 0px auto;
+}
+
+@media screen and (min-width:100px) and (max-width:762px) {
+    body{
+        overflow-x: hidden;
+    }
+    .responsive{
+        width: 98%;
+        margin: 0px auto;
+    }
+}
+
+@media screen and (min-width:763px) and (max-width:992px) {
+    .responsive{
+        width: 80%;
+        margin: 0px auto;
+    }
+}

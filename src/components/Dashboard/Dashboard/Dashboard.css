@@ -1,0 +1,21 @@
+.dash-bg{
+    background-color: #eaeef3;
+}
+.bg-nav{
+    background-color: #ecf0f1;
+}
+.nav-link{
+    text-decoration: none;
+    color: black;
+}
+.list{
+    padding: 12px 0px;
+    padding-left: 30px;
+    text-decoration: none;
+    margin: 0;
+    margin-bottom: 4px;
+}
+.list:hover{
+    background-color: rgb(245, 241, 241);
+    transition: 0.3s;
+}

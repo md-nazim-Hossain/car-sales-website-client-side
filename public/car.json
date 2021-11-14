@@ -1,0 +1,38 @@
+[
+    {
+        "name":"Jerry Akter",
+        "rating":"4",
+        "img":" https://i.ibb.co/23RPfH5/customer1.jpg",
+        "comment":"The best customer service I have ever experienced when filing a claim. Speedy process from start to finish. Never been so satisfied with an insurance claim before."
+    },
+    {
+        "name":"Hasim Sarkar",
+        "rating":"5",
+        "img":" https://i.ibb.co/tK7XZDX/customer2.jpg",
+        "comment":"My claims process was super easy and my adjuster kept me in the loop every step of the way"
+    },
+    {
+        "name":"Alisba Khan",
+        "rating":"3",
+        "img":" https://i.ibb.co/1m00008/customer3.jpg",
+        "comment":"I am absolutely in love with Root! It's quick, easy, and completely affordable."
+    },
+    {
+        "name":"Walid Khan",
+        "rating":"4",
+        "img":" https://i.ibb.co/R3VRqFN/customer4.jpg",
+        "comment":"Filed a claim and received payment 7 days later!! Answered all of my questions on the spot. Great customer service, great company."
+    },
+    {
+        "name":"Jeny Sun",
+        "rating":"5",
+        "img":" https://i.ibb.co/C5VjqGV/customer5.jpg",
+        "comment":"I saved around $90 per month going to Root. I also had a claim and they got back to me within a day. Great customer service!!"
+    },
+    {
+        "name":"Pritom Sarkar",
+        "rating":"5",
+        "img":"https://i.ibb.co/HBYMnjC/customer6.jpg",
+        "comment":"I love that Root is so much more affordable than all the other insurance companies I've gotten quotes from. We have better coverage and more options and are saving $60/mo."
+    }
+]

@@ -1,0 +1,9 @@
+.title{
+    font-size: 60px;
+}
+.border-bottom{
+    border-bottom: 1px solid gray
+}
+.input-bg{
+    background-color: #ededed;
+}
