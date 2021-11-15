@@ -27,7 +27,7 @@ const ExploreCar = () => {
     }
 
     return (
-        <Container className="py-5" id="services">
+        <Container className="py-5 bg-white">
             <Helmet>
                 <title>Explore-Car -| Rent A Car</title>
             </Helmet>

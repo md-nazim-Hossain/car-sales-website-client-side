@@ -4,7 +4,7 @@ import { Col, Container, Row,Form,Button } from 'react-bootstrap';
 
 const Notify = () => {
     return (
-        <Row xs={1} sm={1} md={2} className='w-100'>
+        <Row xs={1} sm={1} md={2} className='w-100' style={{backgroundColor:'#eee', margin:"0px"}}>
             <Col xs={12} sm={8} md={8}>
                 <Container className='ps-5'>
                     <div>

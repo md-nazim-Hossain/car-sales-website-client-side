@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Contacts from '../../Contacts/Contacts';
-import Reviews from '../../Reviews/Reviews/Reviews';
+import Reviews from '../../Reviews/Reviews';
 import FindUs from '../FindUs/FindUs';
 import HomeServices from '../HomeServices/HomeServices';
 import Notify from '../Notify/Notify';

@@ -22,13 +22,13 @@ const Footer = () => {
                         <h3 className='common-color-2'>Contact Us</h3>
                         <div className="common-font common-color">
                             <p>
-                                <i class="fas fa-envelope"></i> khanakim205@gmail.com
+                                <i className="fas fa-envelope"></i> khanakim205@gmail.com
                             </p>
                             <p>
-                                <i class="fas fa-phone-alt"></i> +8801929489348
+                                <i className="fas fa-phone-alt"></i> +8801929489348
                             </p>
                             <p>
-                                <i class="fas fa-map-marker-alt"></i> Nova Tower,Mohakhali,Dhaka,Bangladesh
+                                <i className="fas fa-map-marker-alt"></i> Nova Tower,Mohakhali,Dhaka,Bangladesh
                             </p>
                         </div>
                         <p className='d-flex'>

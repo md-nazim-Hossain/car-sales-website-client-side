@@ -93,7 +93,7 @@ const Booking = () => {
                    <div>
                        <p className='d-flex justify-content-start align-items-center border-bottom py-2'>
                            <div className='pe-5'>
-                            <i class="fas fa-rupee-sign fs-1 common-color"></i>
+                            <i className="fas fa-rupee-sign fs-1 common-color"></i>
                            </div>
                            <div>
                                <h5>COST OF CAR</h5>
