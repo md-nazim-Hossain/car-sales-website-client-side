@@ -33,8 +33,8 @@ const AddCars = () => {
     }
     return (
         <div id="addCars">
-            <Container className='my-5 pb-5'>
-                <h2 className='py-5 text-center'>Please Add <span className='common-color'>Service</span></h2>
+            <Container className='my-3 pb-5'>
+                <h2 className='py-2 text-center'>Please Add <span className='common-color'>New Car</span></h2>
                 <p className='text-muted text-start ps-2 border-left'> red denotes are required</p>
                 <Form onSubmit={handleAddCars}>
                     <Row xs={1} sm={1} md={2}>
