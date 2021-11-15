@@ -53,7 +53,7 @@ const CustomerReview = () => {
                     <Col>
                         <Form.Control
                             as="textarea"
-                            placeholder="Write Description About Tour Related"
+                            placeholder="Write Description About Car Related"
                             className='mb-3 border-right'
                             required
                             name="comment"
