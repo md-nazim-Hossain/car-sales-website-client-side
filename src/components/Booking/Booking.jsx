@@ -76,8 +76,8 @@ const Booking = () => {
                 <Col xs={12} sm={10} md={7}>
                     <div className='d-flex justify-content-center align-items-center'>
                         <div>
-                            <p className='py-5'> <span className='header-super-title pb-4'>GET THE BOOKING FOR EXCLUSIVE TOUR</span></p>
-                            <p className='title'>Booking For<span className='header-title common-color common-font'><br/> World Tour</span></p>
+                            <p className='py-5'> <span className='header-super-title pb-4'>GET THE BUY CAR FOR EXCLUSIVE OFFER</span></p>
+                            <p className='title'>Buy Now<span className='header-title common-color common-font'><br/> World Best Car</span></p>
                             <p className='text-muted fs-5'>{description}</p>
                         </div>
                     </div>
