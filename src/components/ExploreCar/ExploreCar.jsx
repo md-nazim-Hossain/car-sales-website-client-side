@@ -10,7 +10,7 @@ const ExploreCar = () => {
 
     useEffect(() =>{
         setIsLoading(true)
-        fetch('http://localhost:5000/cars')
+        fetch('https://agile-caverns-35035.herokuapp.com/cars')
         .then(res => res.json())
         .then(data => {
             setExploreCar(data);
@@ -18,7 +18,7 @@ const ExploreCar = () => {
         .finally(() =>{
             setIsLoading(false);
         });
-    },[]);
+    },[setIsLoading]);
     
     if(isLoading){
         return <div className="text-center p-5 my-5">

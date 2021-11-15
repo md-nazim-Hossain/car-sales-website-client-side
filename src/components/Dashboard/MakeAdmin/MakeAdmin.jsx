@@ -13,7 +13,7 @@ const MakeAdmin = () => {
 
     const handleAdmin = e =>{
         setIsLoading(true)
-        fetch('http://localhost:5000/users/admin',{
+        fetch('https://agile-caverns-35035.herokuapp.com/users/admin',{
             method:'PUT',
             headers:{
                 "content-type":"application/json"

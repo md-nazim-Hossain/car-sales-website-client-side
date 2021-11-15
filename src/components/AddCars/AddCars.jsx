@@ -15,7 +15,7 @@ const AddCars = () => {
     const handleAddCars = e =>{
 
         // post data to server
-        fetch('http://localhost:5000/addCar',{
+        fetch('https://agile-caverns-35035.herokuapp.com/addCar',{
             method:'POST',
             headers:{
                 "content-type":"application/json"

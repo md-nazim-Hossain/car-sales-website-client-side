@@ -5,7 +5,7 @@ const Product = ({product,products,setProducts}) => {
     const{_id,name,img,description,category,price} = product;
 
     const handleProductDel = id =>{
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://agile-caverns-35035.herokuapp.com/product/${id}`;
         const confirm = window.confirm("Are You Sure You Wanted Deleted ? ");
         if(confirm){
             fetch(url,{

@@ -15,7 +15,7 @@ const Booking = () => {
     const [orderInfo,setOrderInfo] = useState(info);
 
     useEffect(()=>{
-        const url =`http://localhost:5000/cars/${id}`;
+        const url =`https://agile-caverns-35035.herokuapp.com/cars/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setSingleCar(data))
@@ -49,7 +49,7 @@ const Booking = () => {
 
             const buyerInfo = {...orderInfo,carName:name,status:"Pending..."}
        // post data to server
-       fetch('http://localhost:5000/buyer',{
+       fetch('https://agile-caverns-35035.herokuapp.com/buyer',{
            method:"POST",
            headers:{
                "content-type":"application/json"

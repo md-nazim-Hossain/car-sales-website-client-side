@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Spinner } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import Product from '../Product/Product';
 
@@ -7,11 +7,10 @@ const Products = () => {
     const [products,setProducts] = useState([]);
 
     useEffect(() =>{
-        fetch('http://localhost:5000/cars')
+        fetch('https://agile-caverns-35035.herokuapp.com/cars')
         .then(res => res.json())
         .then(data => {
             setProducts(data);
-            console.log(data);
         })
     },[]);
 

@@ -16,7 +16,7 @@ import Products from '../ManageProducts/Products/Products';
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
     const {signOutClick,admin} = useAuth();
-    
+
     return (
         <div className='dash-bg'>
             <Helmet>

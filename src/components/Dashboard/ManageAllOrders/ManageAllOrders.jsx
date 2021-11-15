@@ -8,7 +8,7 @@ const ManageAllOrders = () => {
 
     // get manage all Bookings
     useEffect(() =>{
-        fetch(`http://localhost:5000/manageOrders`)
+        fetch(`https://agile-caverns-35035.herokuapp.com/manageOrders`)
         .then(res => res.json())
         .then(data => setManageOrders(data));
     },[]);

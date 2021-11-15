@@ -9,13 +9,13 @@ const Reviews = () => {
 
     useEffect(() =>{
         setIsLoading(true)
-        fetch('http://localhost:5000/reviews')
+        fetch('https://agile-caverns-35035.herokuapp.com/reviews')
         .then(res => res.json())
         .then(data => setReviews(data))
         .finally(() =>{
             setIsLoading(false)
         });
-    },[]);
+    },[setIsLoading]);
 
     if(isLoading){
         return <div className="text-center p-5 my-5">

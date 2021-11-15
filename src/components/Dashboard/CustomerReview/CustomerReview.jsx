@@ -15,7 +15,7 @@ const CustomerReview = () => {
 
     const handleReview = e=>{
         
-        fetch('http://localhost:5000/reviews',{
+        fetch('https://agile-caverns-35035.herokuapp.com/reviews',{
             method:"POST",
             headers:{
                 "content-type":"application/json"

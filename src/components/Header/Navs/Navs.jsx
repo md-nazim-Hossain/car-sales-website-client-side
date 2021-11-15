@@ -14,14 +14,9 @@ const Navs = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#services">Service</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#find">Find Us</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#contact">Contact Us</Nav.Link>
+                        <Nav.Link as={NavLink} to="/home">Home</Nav.Link>
                         <Nav.Link as={NavLink} to="/exploreCar">Explore-Cars</Nav.Link>
-                        {user.email && <>
-                            <Nav.Link as={NavHashLink} to="/dashboard">Dashboard</Nav.Link>
-                        </>}
+                        <Nav.Link as={NavHashLink} to="/dashboard">Dashboard</Nav.Link>
                     </Nav>
                     <Nav>
                     {user.email && <Nav.Link>

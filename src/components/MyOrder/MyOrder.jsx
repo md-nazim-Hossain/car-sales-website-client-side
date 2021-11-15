@@ -7,7 +7,7 @@ const MyOrder = ({order,setMyOrders,myOrders,statusId}) => {
 
     // DElete My booking
     const handleMyBookingDel = id =>{
-        const url = `http://localhost:5000/myOrders/${id}`;
+        const url = `https://agile-caverns-35035.herokuapp.com/myOrders/${id}`;
         const confirm = window.confirm("Are You Sure You Wanted Deleted ? ");
         if(confirm){
             fetch(url,{
@@ -29,7 +29,7 @@ const MyOrder = ({order,setMyOrders,myOrders,statusId}) => {
     const handleStatus = id =>{
         const newBooking = {...order,status:"Shipped"};
 
-        const url = `http://localhost:5000/myOrders/${id}`;
+        const url = `https://agile-caverns-35035.herokuapp.com/myOrders/${id}`;
         fetch(url,{
             method:"PUT",
             headers:{

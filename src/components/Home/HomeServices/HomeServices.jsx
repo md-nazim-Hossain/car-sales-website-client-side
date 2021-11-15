@@ -9,7 +9,7 @@ const HomeServices = () => {
 
     useEffect(() =>{
         setIsLoading(true)
-        fetch('http://localhost:5000/cars')
+        fetch('https://agile-caverns-35035.herokuapp.com/cars')
         .then(res => res.json())
         .then(data => {
             setCars(data);
@@ -17,7 +17,7 @@ const HomeServices = () => {
         .finally(() =>{
             setIsLoading(false);
         });
-    },[]);
+    },[setIsLoading]);
     
     if(isLoading){
         return <div className="text-center p-5 my-5">

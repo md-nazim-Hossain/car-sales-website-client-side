@@ -136,7 +136,7 @@ const useFirebase = () =>{
     const saveUsers = (email,displayName,method) =>{
         const user = {email,displayName};
         
-        fetch('http://localhost:5000/user',{
+        fetch('https://agile-caverns-35035.herokuapp.com/user',{
             method:method,
             headers:{
                 'content-type':"application/json"
@@ -153,7 +153,7 @@ const useFirebase = () =>{
 
     // check admin
     useEffect(()=>{
-        fetch(`http://localhost:5000/user/${user.email}`)
+        fetch(`https://agile-caverns-35035.herokuapp.com/user/${user.email}`)
         .then(res => res.json())
         .then(data => {
             setAdmin(data.admin);
