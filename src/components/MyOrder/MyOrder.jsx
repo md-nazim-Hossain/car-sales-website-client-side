@@ -72,7 +72,7 @@ const MyOrder = ({order,setMyOrders,myOrders,statusId}) => {
             if(data.modifiedCount){
                 Swal.fire(
                     "Your Booking is approved by admin",
-                    'Thanks For Booking!',
+                    'Thank You For Booking!',
                     'success'
                   ).then(result =>{
                     if(result.isConfirmed){
