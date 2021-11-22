@@ -3,6 +3,7 @@ import {getAuth, GoogleAuthProvider,signInWithPopup,onAuthStateChanged,signOut,
     createUserWithEmailAndPassword ,signInWithEmailAndPassword,updateProfile,sendPasswordResetEmail} from "firebase/auth";
 import { useEffect } from "react";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 initFirebaseConfig();
 
@@ -81,12 +82,20 @@ const useFirebase = () =>{
     const handleRegister = (history) =>{
         createUserWithEmailAndPassword(auth,email,password)
        .then(result =>{
+        Swal.fire(
+            name+' Successfully Registrated!',
+            'Please Login Now!',
+            'success'
+          ).then(res =>{
+              if(res.isConfirmed){
+                setUser(result.user);
+                history.push('/');
+                setError('');
+                saveUsers(email,name,"POST");
+                setIsLoading(true);
+              }
+          })
         handleUpdate();
-        setUser(result.user);
-        history.push('/');
-        setError('');
-        saveUsers(email,name,"POST");
-        setIsLoading(true);
         
     }).catch(e =>{
         setError(e.message);
@@ -146,7 +155,11 @@ const useFirebase = () =>{
         .then(res => res.json())
         .then(data => {
             if(data.insertedId){
-                alert("User Successfully Created");
+                Swal.fire(
+                    name+' Successfully Registrated!',
+                    'Please Clicked The Button!',
+                    'success'
+                  )
             }
         })
     }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Container, Form, Row,Button, Spinner } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 import useAuth from '../../../hooks/useAuth';
 
 const MakeAdmin = () => {
@@ -12,27 +13,62 @@ const MakeAdmin = () => {
     };
 
     const handleAdmin = e =>{
-        setIsLoading(true)
-        fetch('https://agile-caverns-35035.herokuapp.com/users/admin',{
-            method:'PUT',
-            headers:{
-                "content-type":"application/json"
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-success m-2',
+              cancelButton: 'btn btn-danger'
             },
-            body:JSON.stringify({email})
-        })
-        .then(res => res.json())
-        .then(data => {
-            if(data.modifiedCount){
-                alert('Create New Admin');
-                setEmail('');
+            buttonsStyling: false
+          })
+          
+          swalWithBootstrapButtons.fire({
+            title: 'Are you sure?',
+            text: "You won't be create new admin!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, make admin!',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+                setIsLoading(true)
+                fetch('https://agile-caverns-35035.herokuapp.com/users/admin',{
+                    method:'PUT',
+                    headers:{
+                        "content-type":"application/json"
+                    },
+                    body:JSON.stringify({email})
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if(data.modifiedCount){
+                        swalWithBootstrapButtons.fire(
+                            'Successfully Created New Admin!',
+                            'You Are now new admin.',
+                            'success'
+                          )
+                        setEmail('');
+                    }
+                    else{
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'User Not Available!',
+                          })
+                    }
+                })
+                .finally(() =>{
+                    setIsLoading(false);
+                });
+
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+              swalWithBootstrapButtons.fire(
+                'Cancelled',
+                'Your imaginary create new Admin is safe :)',
+                'error'
+              )
             }
-            else{
-                alert('User Not Available');
-            }
-        })
-        .finally(() =>{
-            setIsLoading(false);
-        })
+          })
         e.preventDefault();
     };
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Col,Button, Container, Form, Row } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
+import Swal from 'sweetalert2';
 
 const CustomerReview = () => {
     const [review,setReview] = useState({});
@@ -25,10 +26,22 @@ const CustomerReview = () => {
         .then(res => res.json())
         .then(data =>{
             if(data.insertedId){
-                alert("Successfully Review Added");
+                Swal.fire(
+                    'Successfully Added Your Review!',
+                    'You clicked the button!',
+                    'success'
+                  )
+            }
+            else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!',
+                    footer: '<a href="">Why do I have this issue?</a>'
+                  })
             }
         })
-        e.pereventDefault();
+        e.preventDefault();
     };
 
     return (

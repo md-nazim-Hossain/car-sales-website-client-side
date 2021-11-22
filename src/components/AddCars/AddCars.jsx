@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 const AddCars = () => {
     const [addCar,setAddCar] = useState({});
@@ -25,7 +26,11 @@ const AddCars = () => {
         .then(res => res.json())
         .then(data => {
             if(data.insertedId){
-                alert("Successfully Addeded New Car to Database");
+                Swal.fire(
+                    'Successfully Added Products!',
+                    'add products in your Database!',
+                    'success'
+                  )
             }
         });
 

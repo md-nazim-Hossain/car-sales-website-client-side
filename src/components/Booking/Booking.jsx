@@ -3,6 +3,7 @@ import { Col, Container, Form, Row,Button } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router';
 import { NavHashLink } from 'react-router-hash-link';
+import Swal from 'sweetalert2';
 import useAuth from '../../hooks/useAuth';
 import './Booking.css';
 
@@ -59,7 +60,11 @@ const Booking = () => {
        .then(res => res.json())
        .then(data =>{
            if(data.insertedId){
-               alert("Welcome "+orderInfo.name+" Your are Successfully Booking");
+               Swal.fire(
+                "Welcome "+orderInfo.name,
+                'Your are Successfully Booking!',
+                'success'
+              )
                setOrderInfo({});
            }
        })
